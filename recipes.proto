@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+message RecipeRequest {
+  string id = 1;
+}
+
+message RecipeData {
+  string title = 1;
+  string description = 2;
+}
+
+service RecipeService {
+  rpc GetRecipe(RecipeRequest) returns RecipeData {};
+}
